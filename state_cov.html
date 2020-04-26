@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+
+    <!-- My jQuery -->
+    <!-- <script type="text/javascript" src="cov.js"> -->
+
+    <!-- </script> -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- Uncompressed jQuery -->
+    >
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Font -->
+
+
+    <script
+      src="https://kit.fontawesome.com/996973c893.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- My Stylesheet -->
+    <link rel="stylesheet" href="cov.css" />
+
+    <!-- My jQuery -->
+    <script src="cov2.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js "></script>
+
+    <title>Covid-19 Tracker India</title>
+  </head>
+
+  <body class="fontbody">
+    <div class="container-fluid" align="center">
+      <div class="jumbotron">
+        <h1>---Select State---</h1>
+        <!-- last Updated -->
+        <p id="updated"></p>
+      </div>
+
+
+      <div class="container-fluid fo">
+        <select class="" id="drop" name="">
+            <option>Choose a state</option>
+        </select>
+         <br>
+        <input type="submit" class="btn btn-dark sbt" name="" id="qq" value="Submit">
+      </div>
+
+      <div id="refresh"></div>
+
+
+        <!-- Used by Chart.js -->
+        <canvas id="myChart2"></canvas>
+
+        <!-- Note -->
+        <div class="container text-center my-5">
+          <h6 class="text-info" id="bottom_note"></h6>
+        </div>
+
+    </div>
+  </body>
+</html>
