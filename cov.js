@@ -49,17 +49,18 @@ $(document).ready(function(){
           label:"Confirmed",
           data:confirmed,
           backgroundColor:"#9AC00D"
-        },
-        {
-          label:"Recovered",
-          data:recovered,
-          backgroundColor:"#FF5733"
-        },
-        {
-        label:"Deaths",
-        data:deaths,
-        backgroundColor:"#DAF7A6"
-      }
+       }
+       // ,
+      //   {
+      //     label:"Recovered",
+      //     data:recovered,
+      //     backgroundColor:"#FF5733"
+      //   },
+      //   {
+      //   label:"Deaths",
+      //   data:deaths,
+      //   backgroundColor:"#DAF7A6"
+      // }
         ]
       },
       options:{
@@ -90,7 +91,86 @@ $(document).ready(function(){
 
       }
     })
+// chart a
+    var myCharta = document.getElementById('myCharta').getContext('2d');
+    var charta = new Chart(myCharta,{
+      type:"bar",
+      data:{
+        labels:states,
+        datasets:[{
+          label:"Recovered",
+          data:recovered,
+          backgroundColor:"#FF5733"
+        }]
+      },
+      options:{
 
+        legend: {
+          labels: {
+         fontColor: '#ffffff'
+      },
+           fontColor: "white",
+       },
+       scales: {
+           xAxes: [{
+               ticks: {
+                   fontColor: "white",
+                   stepSize: 5,
+                   beginAtZero: true
+               }
+           }],
+           yAxes: [{
+               ticks: {
+                   fontColor: "white",
+                   stepSize: 250,
+                   beginAtZero: true
+               }
+           }]
+       }
+
+
+      }
+    })
+// chart b
+var myChartb = document.getElementById('myChartb').getContext('2d');
+    var chartb = new Chart(myChartb,{
+      type:"bar",
+      data:{
+        labels:states,
+        datasets:[{
+          label:"Deaths",
+          data:deaths,
+          backgroundColor:"#DAF7A6"
+        }]
+      },
+      options:{
+
+        legend: {
+          labels: {
+         fontColor: '#ffffff'
+      },
+           fontColor: "white",
+       },
+       scales: {
+           xAxes: [{
+               ticks: {
+                   fontColor: "white",
+                   stepSize: 5,
+                   beginAtZero: true
+               }
+           }],
+           yAxes: [{
+               ticks: {
+                   fontColor: "white",
+                   stepSize: 50,
+                   beginAtZero: true
+               }
+           }]
+       }
+
+
+      }
+    })
 
   })
 
