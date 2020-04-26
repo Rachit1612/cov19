@@ -33,7 +33,7 @@ $("#drop").ready(function(){
       // console.log(state_list[idx]);
       $('h1').text("***"+state_list[idx]+"***");
       $('.fo').fadeOut('fast');
-      $('#refresh').append("\t<a href=\"https://rachit1612.github.io/cov19/\">HOME</a> <br> ")
+      $('#refresh').append("<a href=\"index.html\">HOME</a> <br> ")
       $('#refresh').append("<a href=\"state_cov.html\">Check Other State</a> <br>")
       $('#updated').append("{ Last Updated On: "+last_updated[idx]+" }")
       $('#bottom_note').append("*Click on the Confirmed/Recovered/Deaths buttons above to see the chart individually.*")
