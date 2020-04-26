@@ -8,6 +8,16 @@ h1{
   color: #145AA0;
 }
 
+#c2{
+  color: #145AA0;
+}
+
+/* #contain{
+  width: 480px;
+  margin: 0px auto;
+  background: #2C3E50;
+} */
+
 #cstate{
   color: #DCCF12;
   text-decoration-style: solid;
@@ -38,3 +48,11 @@ h1{
 .fontbody{
   font-family: 'Anton', sans-serif;
 }
+
+
+/* @media screen and (max-width:360px){
+  #contain{
+    width: 100%;
+  }
+
+} */

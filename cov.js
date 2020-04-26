@@ -81,7 +81,7 @@ $(document).ready(function(){
            yAxes: [{
                ticks: {
                    fontColor: "white",
-                   stepSize: 400,
+                   stepSize: 1000,
                    beginAtZero: true
                }
            }]

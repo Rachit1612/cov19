@@ -10,6 +10,7 @@ $("#drop").ready(function(){
     var state_deaths=[];
     var state_confirmed=[];
     var state_recovered=[];
+    var state_active=[];
     var last_updated=[];
 
     $.each(state,function(id,obj){
@@ -18,6 +19,7 @@ $("#drop").ready(function(){
       state_deaths.push(obj.deaths);
       state_recovered.push(obj.recovered);
       state_confirmed.push(obj.confirmed);
+      state_active.push(obj.active);
       last_updated.push(obj.lastupdatedtime)
 
       drop.append("<option value=\""+id+"\">"+obj.state+"</option>")
@@ -31,12 +33,18 @@ $("#drop").ready(function(){
       var idx = dd.val();
       // console.log(idx);
       // console.log(state_list[idx]);
-      $('h1').text("***"+state_list[idx]+"***");
+      $('#c2').text("***"+state_list[idx]+"***");
       $('.fo').fadeOut('fast');
+      document.getElementById('inf').style.display='block';
       $('#refresh').append("<a href=\"index.html\">HOME</a> <br> ")
       $('#refresh').append("<a href=\"state_cov.html\">Check Other State</a> <br>")
       $('#updated').append("{ Last Updated On: "+last_updated[idx]+" }")
       $('#bottom_note').append("*Click on the Confirmed/Recovered/Deaths buttons above to see the chart individually.*")
+
+      $('#confirmed').append(state_confirmed[idx]);
+      $('#deaths').append(state_deaths[idx]);
+      $('#recovered').append(state_recovered[idx]);
+      $('#active').append(state_active[idx]);
 
 
       var myC = document.getElementById("myChart2").getContext('2d');
